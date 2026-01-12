@@ -1,10 +1,12 @@
 from pydantic_settings import BaseSettings
 
+
 class Settings(BaseSettings):
-    APP_NAME: str = "Stratum Backend"
-    DEBUG: bool = True
+    PROJECT_NAME: str = "Stratum"
+    DATABASE_URL: str = "sqlite:///./stratum.db"
 
     class Config:
         env_file = ".env"
+
 
 settings = Settings()
